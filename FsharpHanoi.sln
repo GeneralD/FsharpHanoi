@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsharpHanoi", "FsharpHanoi\FsharpHanoi.fsproj", "{A65D9E9A-3EFD-485F-9140-BEFC26205E5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A65D9E9A-3EFD-485F-9140-BEFC26205E5B}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{A65D9E9A-3EFD-485F-9140-BEFC26205E5B}.Debug|anycpu.Build.0 = Debug|anycpu
+		{A65D9E9A-3EFD-485F-9140-BEFC26205E5B}.Release|anycpu.ActiveCfg = Release|anycpu
+		{A65D9E9A-3EFD-485F-9140-BEFC26205E5B}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
