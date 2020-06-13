@@ -13,7 +13,7 @@ let push x = modify $ cons x
 
 let rec hanoi src bare dst (height : int) =
     match height with
-    | 0 -> State $ fun s -> ((), s) // return ()
+    | 0 -> modify id
     | _ ->
         monad {
             do! hanoi src dst bare $ height - 1
@@ -23,12 +23,13 @@ let rec hanoi src bare dst (height : int) =
             do! hanoi bare src dst $ height - 1
         }
 
+let result height =
+    monad {
+        do! hanoi "Left" "Mid" "Right" height
+        do! modify rev
+    }
+
 [<EntryPoint>]
 let main argv =
-    let result =
-        monad {
-            do! hanoi "Left" "Mid" "Right" 3
-            do! modify rev
-        }
-    printfn "%A" $ State.exec result []
+    printfn "%A" $ State.exec (result 5) []
     0
