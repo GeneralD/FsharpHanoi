@@ -31,5 +31,6 @@ let result height =
 
 [<EntryPoint>]
 let main argv =
-    printfn "%A" $ State.exec (result 5) []
+    let r = result 3
+    printfn "%A" $ State.exec r []
     0
